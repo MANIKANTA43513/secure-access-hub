@@ -131,7 +131,7 @@ export default function Index() {
       {/* Footer */}
       <footer className="border-t border-border py-8">
         <div className="container text-center text-sm text-muted-foreground">
-          <p>AnythingAI Backend Developer Assignment • JWT + RBAC + CRUD</p>
+          <p>Secure Task Management System</p>
         </div>
       </footer>
     </div>
