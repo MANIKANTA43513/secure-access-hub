@@ -123,7 +123,7 @@ backend-assignment/
 
 ⚙️ Setup & Installation
 1️⃣ Clone the Repository
-git clone https://github.com/your-username/backend-assignment.git
+
 cd backend-assignment
 
 2️⃣ Install Backend Dependencies
@@ -143,7 +143,6 @@ npm run dev
 
 Server will start at:
 
-http://localhost:5000
 
 🔎 API Documentation (Swagger)
 
@@ -179,9 +178,9 @@ npm install
 npm start
 
 
-Frontend runs at:
+https://secure-access-hub-nine.vercel.app/
 
-http://localhost:3000
+
 
 🔐 Security Measures
 
