@@ -1,73 +1,247 @@
-# Welcome to your Lovable project
+🚀 Backend Developer Intern Assignment
 
-## Project info
+Scalable REST API with Authentication & Role-Based Access Control
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+📌 Overview
 
-## How can I edit this code?
+This project is a secure, scalable backend system built using Node.js and Express.js, featuring:
 
-There are several ways of editing your application.
+JWT-based authentication
 
-**Use Lovable**
+Role-Based Access Control (RBAC)
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+CRUD operations on a secondary entity (Tasks)
 
-Changes made via Lovable will be committed automatically to this repo.
+API versioning
 
-**Use your preferred IDE**
+Input validation and error handling
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Swagger API documentation
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+A basic frontend UI to demonstrate API usage
 
-Follow these steps:
+The goal of this assignment is to demonstrate real-world backend engineering practices, not just CRUD functionality.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+🛠 Tech Stack
+Backend
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+Runtime: Node.js
 
-# Step 3: Install the necessary dependencies.
-npm i
+Framework: Express.js
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+Database: MongoDB (Mongoose)
+
+Authentication: JSON Web Tokens (JWT)
+
+Security: bcryptjs, helmet, cors
+
+Validation: Joi
+
+Documentation: Swagger (swagger-jsdoc, swagger-ui-express)
+
+Frontend
+
+Framework: React.js
+
+State Management: React Hooks (useState, useEffect)
+
+HTTP Client: Axios
+
+Tools
+
+VS Code
+
+Postman / Insomnia
+
+Git & GitHub
+
+✨ Features
+🔐 Authentication & Authorization
+
+User registration with hashed passwords
+
+Secure login with JWT generation
+
+JWT verification middleware
+
+Role-based access (user, admin)
+
+🧩 Role-Based Access Control (RBAC)
+
+Users can manage only their own tasks
+
+Admins can manage all tasks
+
+Clean middleware-based role enforcement
+
+📝 Task Management (CRUD)
+
+Create a task
+
+Fetch all tasks (role-aware)
+
+Update tasks (ownership enforced)
+
+Delete tasks (admin override supported)
+
+📦 API Best Practices
+
+REST-compliant endpoints
+
+Proper HTTP status codes
+
+Centralized error handling
+
+API versioning (/api/v1)
+
+📚 API Documentation
+
+Interactive Swagger UI for testing APIs
+
+Clear request/response schemas
+
+📁 Project Structure
+backend-assignment/
+│
+├── src/
+│   ├── config/          # DB connection & environment setup
+│   ├── controllers/     # Auth & Task business logic
+│   ├── middleware/      # JWT & RBAC middleware
+│   ├── models/          # Mongoose schemas
+│   ├── routes/          # Versioned API routes
+│   ├── utils/           # Validation & error helpers
+│   └── app.js           # Express app entry point
+│
+├── frontend/
+│   ├── components/      # UI components
+│   └── services/        # Axios API layer
+│
+├── .env                 # Environment variables
+├── .gitignore
+├── README.md
+└── package.json
+
+⚙️ Setup & Installation
+1️⃣ Clone the Repository
+git clone https://github.com/your-username/backend-assignment.git
+cd backend-assignment
+
+2️⃣ Install Backend Dependencies
+npm install
+
+3️⃣ Environment Variables
+
+Create a .env file in the root directory:
+
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_secure_secret_key
+
+4️⃣ Run the Backend Server
 npm run dev
-```
 
-**Edit a file directly in GitHub**
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Server will start at:
 
-**Use GitHub Codespaces**
+http://localhost:5000
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+🔎 API Documentation (Swagger)
 
-## What technologies are used for this project?
+Once the server is running, open:
 
-This project is built with:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
 
-## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+You can:
 
-## Can I connect a custom domain to my Lovable project?
+Test authentication APIs
 
-Yes, you can!
+Copy JWT tokens
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+Call protected routes directly
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+🖥 Frontend Usage
+Features
+
+Register & Login users
+
+Store JWT in localStorage
+
+Fetch protected data
+
+Perform CRUD actions on tasks
+
+Display API success/error messages
+
+Start Frontend
+cd frontend
+npm install
+npm start
+
+
+Frontend runs at:
+
+http://localhost:3000
+
+🔐 Security Measures
+
+Passwords are hashed using bcrypt
+
+JWT tokens are signed with a secure secret
+
+Protected routes require valid tokens
+
+Role checks prevent unauthorized access
+
+Input validation prevents malformed data
+
+Helmet secures HTTP headers
+
+CORS configured for safe cross-origin access
+
+📈 Scalability & Future Enhancements
+
+If this application were to scale in production:
+
+🔄 Performance
+
+Redis caching for frequent reads
+
+Pagination for large datasets
+
+🧱 Architecture
+
+Split into microservices (Auth, Tasks, Users)
+
+API Gateway for centralized routing
+
+🐳 Deployment
+
+Dockerize services
+
+Use Nginx as reverse proxy
+
+Deploy on AWS / GCP / Azure
+
+📊 Observability
+
+Winston for logging
+
+Prometheus + Grafana for monitoring
+
+✅ Evaluation Checklist Mapping
+Requirement	Status
+JWT Authentication	✅ Implemented
+Role-Based Access Control	✅ Implemented
+CRUD APIs	✅ Implemented
+API Versioning	✅ Implemented
+Input Validation	✅ Implemented
+Swagger Documentation	✅ Implemented
+Frontend Integration	✅ Implemented
+Scalability Considerations	✅ Documented
+👨‍💻 Author
+
+Manikanta
+Backend Developer Intern Candidate
+
+This project reflects real-world backend engineering practices, focusing on security, scalability, and clean architecture.
